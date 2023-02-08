@@ -3,6 +3,15 @@
   "version": "1.0.0",
   "license": "MIT",
   "type": "module",
+  "keywords": [
+    "nuxt3-module",
+    "nuxt3-notifications",
+    "vue3-notifications"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/windx-foobar/nuxt3-notifications"
+  },
   "exports": {
     ".": {
       "import": "./dist/module.mjs",
