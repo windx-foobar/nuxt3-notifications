@@ -101,6 +101,10 @@ function clean(group: string) {
           <i class="icon ion-close-circled" />
           ERROR
         </button>
+        <button class="info" @click="show('foo-css', 'info')">
+          <i class="icon ion-close-circled" />
+          INFO
+        </button>
       </div>
       <div>
         <p>Custom style:</p>
@@ -165,6 +169,10 @@ body {
 
     &.error {
       background: #e54d42;
+    }
+
+    &.info {
+      background: #02ccba;
     }
 
     &:active {
