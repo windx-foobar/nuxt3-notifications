@@ -11,7 +11,10 @@ export interface ModuleOptions {
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: PACKAGE_NAME,
-    configKey: 'nuxtNotifications'
+    configKey: 'nuxtNotifications',
+    compatibility: {
+      nuxt: '^3.0.0'
+    }
   },
   defaults: {
     componentName: 'NuxtNotifications'
