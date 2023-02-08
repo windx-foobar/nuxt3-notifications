@@ -30,10 +30,8 @@ module.exports = {
 
   // Область. Она характеризует фрагмент кода, которую затронули изменения
   scopes: [
-    { name: 'components' },
-    { name: 'tutorial' },
-    { name: 'catalog' },
-    { name: 'product' }
+    { name: 'playground' },
+    { name: 'sources' }
   ],
 
   // Возможность задать спец ОБЛАСТЬ для определенного типа коммита (пример для 'fix')
