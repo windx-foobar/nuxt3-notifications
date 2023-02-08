@@ -42,7 +42,7 @@ export default defineNuxtModule<ModuleOptions>({
     // TYPING DYNAMIC COMPONENT
     addTemplate({
       filename: 'nuxt3-notifications.d.ts',
-      src: resolve(runtimeDir, 'type.d.ts.stub'),
+      src: resolve(runtimeDir, 'templates/type.d.ts.stub'),
       options: { componentName }
     });
 
@@ -53,7 +53,10 @@ export default defineNuxtModule<ModuleOptions>({
 
     nuxt.options.build.transpile.push(runtimeDir);
 
-    addPlugin(resolve(runtimeDir, 'plugin'));
+    addPlugin({
+      mode: nuxt.options.ssr ? 'all' : 'client',
+      src: resolve(runtimeDir, 'plugin')
+    });
 
     logger.success(`[${PACKAGE_NAME}]: End setup`);
   }
