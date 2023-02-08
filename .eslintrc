@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "@nuxtjs/eslint-config-typescript"
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": [
+      "off"
+    ],
+    "semi": [
+      "off"
+    ],
+    "space-before-function-paren": [
+      "off"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+interface NotificationsProps {
+  group: string | undefined
+  width: string | number | undefined
+  reverse: boolean | undefined
+  position: string | string[] | undefined
+  classes: string | undefined
+  animationName: string | undefined
+  speed: number | undefined
+  cooldown: number | undefined
+  duration: number | undefined
+  delay: number | undefined
+  max: number | undefined
+  ignoreDuplicates: boolean | undefined
+  closeOnClick: boolean | undefined
+  pauseOnHover: boolean | undefined
+}
+
+declare module "@vue/runtime-core" {
+  export interface GlobalComponents {
+    "<%= options.componentName %>": import("vue").DefineComponent<NotificationsProps>
+  }
+}
+
+export const <%= options.componentName %>: import("vue").DefineComponent<NotificationsProps>

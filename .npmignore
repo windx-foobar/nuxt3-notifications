@@ -1,0 +1,15 @@
+src
+playground
+.editorconfig
+.eslintignore
+.eslintrc
+.gitignore
+.git
+.npmrc
+.npmignore
+.nuxtrc
+.nvmrc
+.prettierignore
+.prettierrc
+tsconfig.json
+yarn.lock
