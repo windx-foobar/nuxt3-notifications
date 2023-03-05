@@ -1,6 +1,6 @@
 {
   "name": "nuxt3-notifications",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "license": "MIT",
   "type": "module",
   "keywords": [
@@ -21,7 +21,8 @@
   "main": "./dist/module.cjs",
   "types": "./dist/types.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "templates"
   ],
   "engines": {
     "node": ">= 14.20.0"

@@ -25,15 +25,18 @@ export default defineNuxtModule<ModuleOptions>({
     let { componentName } = options;
     componentName = pascalCase(componentName!);
 
-    logger.info(`[${PACKAGE_NAME}]: Starting setup`);
+    logger.info('Starting setup');
 
     const { resolve } = createResolver(import.meta.url);
 
     const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url));
 
-    nuxt.options.runtimeConfig.public = {
-      ...nuxt.options.runtimeConfig.public,
-      nuxtNotifications: { componentName }
+    nuxt.options.runtimeConfig = {
+      ...(nuxt.options.runtimeConfig || {}),
+      public: {
+        ...(nuxt.options.runtimeConfig.public || {}),
+        nuxtNotifications: { componentName }
+      }
     };
 
     // GLOBAL useNotification hook
@@ -44,23 +47,21 @@ export default defineNuxtModule<ModuleOptions>({
 
     // TYPING DYNAMIC COMPONENT
     addTemplate({
-      filename: 'nuxt3-notifications.d.ts',
-      src: resolve(runtimeDir, 'templates/type.d.ts.stub'),
+      filename: 'nuxt-notifications.d.ts',
+      src: resolve('../templates/nuxt-notifications.ejs'),
       options: { componentName }
     });
 
     // ADD MODULE TYPING TO GLOBAL REFERENCE
     nuxt.hook('prepare:types', (options) => {
-      options.references.push({ path: 'nuxt3-notifications.d.ts' });
+      options.references.push({ path: 'nuxt-notifications.d.ts' });
     });
-
-    nuxt.options.build.transpile.push(runtimeDir);
 
     addPlugin({
       mode: nuxt.options.ssr ? 'all' : 'client',
       src: resolve(runtimeDir, 'plugin')
     });
 
-    logger.success(`[${PACKAGE_NAME}]: End setup`);
+    logger.success('Setup end');
   }
 });
