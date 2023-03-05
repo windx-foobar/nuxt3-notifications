@@ -31,7 +31,9 @@
     "prepack": "nuxt-module-build",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
-    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground"
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
+    "release": "npm run lint && npm run unit && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@kyvg/vue3-notification": "^2.8.0",
