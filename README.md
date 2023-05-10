@@ -38,7 +38,7 @@ export default defineNuxtConfig({
 <!-- page.vue/component.vue -->
 
 <script setup>
-  const { notifiy } = useNotification();
+  const { notify } = useNotification();
 
   function onClick() {
     notify({
