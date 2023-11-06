@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.1.7
+
+[compare changes](https://github.com/windx-foobar/nuxt3-notifications/compare/v1.1.6...v1.1.7)
+
+
+### 🩹 Fixes
+
+  - Add import statement in template type ([5c5dfa3](https://github.com/windx-foobar/nuxt3-notifications/commit/5c5dfa3))
+
+### ❤️  Contributors
+
+- Windx-foobar <bezalkogoln1ycoder@gmail.com>
+
 ## v1.1.6
 
 [compare changes](https://github.com/windx-foobar/nuxt3-notifications/compare/v1.1.5...v1.1.6)
