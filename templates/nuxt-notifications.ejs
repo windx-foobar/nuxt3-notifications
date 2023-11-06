@@ -31,6 +31,7 @@ declare global {
   const useNotification: typeof import('@kyvg/vue3-notification')['useNotification']
 }
 
+import { UnwrapRef } from 'vue';
 declare module 'vue' {
   interface ComponentCustomProperties {
     readonly useNotification: UnwrapRef<typeof import('@kyvg/vue3-notification')['useNotification']>
