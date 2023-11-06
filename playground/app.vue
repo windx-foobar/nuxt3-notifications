@@ -43,10 +43,13 @@ function clean(group: string) {
 <template>
   <div id="app">
     <h2>
-      Vue.js Notification
+      Nuxt.js Notification
       <br />
-      <a href="https://github.com/kyvg/vue3-notification/blob/master/README.md" target="readme">Readme</a>
-      <a href="https://github.com/kyvg/vue3-notification/" target="issues">Github</a>
+      <a href="https://github.com/windx-foobar/nuxt3-notifications/blob/master/README.md" target="readme">Readme</a> <br />
+      <a href="https://github.com/windx-foobar/nuxt3-notifications" target="issues">Github</a>
+      <br />
+      <a href="https://github.com/kyvg/vue3-notification/blob/master/README.md" target="readme">Readme (fork)</a> <br />
+      <a href="https://github.com/kyvg/vue3-notification/" target="issues">Github (fork)</a>
     </h2>
 
     <!-- CSS animation example -->
