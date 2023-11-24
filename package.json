@@ -58,5 +58,6 @@
     "cz-customizable": {
       "config": "config/git/commitizen.cjs"
     }
-  }
+  },
+  "packageManager": "yarn@1.22.19"
 }
