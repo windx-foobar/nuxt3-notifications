@@ -66,6 +66,9 @@ export default defineNuxtConfig({
 
 ## 💻 Development
 
-- Run `npm run dev:prepare` to generate type stubs.
-- Use `npm run dev` to start [playground](https://github.com/windx-foobar/nuxt3-notifications/tree/master/playground) in
+- Fork and clone [windx-foobar/nuxt3-notifications](https://github.com/windx-foobar/nuxt3-notifications)
+- Enable [corepack](https://github.com/nodejs/corepack) using corepack enable (use npm i -g corepack for Node.js < 16.10)
+- Install dependencies using `yarn install`
+- Run `yarn dev:prepare` to generate type stubs.
+- Use `yarn dev` to start [playground](https://github.com/windx-foobar/nuxt3-notifications/tree/master/playground) in
   development mode.
