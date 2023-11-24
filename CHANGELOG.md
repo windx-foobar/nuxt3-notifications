@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v1.1.8
+
+[compare changes](https://github.com/windx-foobar/nuxt3-notifications/compare/v1.1.7...v1.1.8)
+
+### 🩹 Fixes
+
+- Don't pin nuxt packages ([#3](https://github.com/windx-foobar/nuxt3-notifications/pull/3))
+
+### 🏡 Chore
+
+- Add packageManager property in package.json ([ff8c172](https://github.com/windx-foobar/nuxt3-notifications/commit/ff8c172))
+- Update development guideline ([fde80f1](https://github.com/windx-foobar/nuxt3-notifications/commit/fde80f1))
+
+### ❤️ Contributors
+
+- Windx-foobar <bezalkogoln1ycoder@gmail.com>
+- Alexey
+
 ## v1.1.7
 
 [compare changes](https://github.com/windx-foobar/nuxt3-notifications/compare/v1.1.6...v1.1.7)
