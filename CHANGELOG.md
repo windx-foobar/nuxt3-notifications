@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.1.9
+
+[compare changes](https://github.com/windx-foobar/nuxt3-notifications/compare/v1.1.8...v1.1.9)
+
+### 🏡 Chore
+
+- Added @nuxt/kit in peerDependencies ([667ec7a](https://github.com/windx-foobar/nuxt3-notifications/commit/667ec7a))
+
+### ❤️ Contributors
+
+- Windx-foobar <bezalkogoln1ycoder@gmail.com>
+
 ## v1.1.8
 
 [compare changes](https://github.com/windx-foobar/nuxt3-notifications/compare/v1.1.7...v1.1.8)
