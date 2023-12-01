@@ -35,9 +35,11 @@
     "release": "npm run lint && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
     "lint": "eslint ."
   },
+  "peerDependencies": {
+    "@nuxt/kit": "^3.0.0"
+  },
   "dependencies": {
     "@kyvg/vue3-notification": "^2.8.0",
-    "@nuxt/kit": "^3.0.0",
     "scule": "^1.0.0"
   },
   "devDependencies": {
