@@ -34,6 +34,7 @@
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
     "docs:dev": "nuxi dev docs",
     "docs:build": "nuxi generate docs",
+    "docs:deploy": "push-dir --dir=docs/dist --branch=gh-pages --cleanup",
     "release": "npm run lint && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
     "lint": "eslint ."
   },
@@ -45,6 +46,7 @@
     "scule": "^1.0.0"
   },
   "devDependencies": {
+    "@nuxt-themes/docus": "latest",
     "@nuxt/module-builder": "^0.2.1",
     "@nuxt/schema": "^3.0.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
@@ -53,8 +55,8 @@
     "eslint": "8.22.0",
     "nuxt": "^3.0.0",
     "prettier": "^2.8.3",
-    "sass": "^1.57.1",
-    "@nuxt-themes/docus": "latest"
+    "push-dir": "^0.4.1",
+    "sass": "^1.57.1"
   },
   "config": {
     "commitizen": {
