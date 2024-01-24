@@ -2,17 +2,6 @@
 const { notify } = useNotification();
 
 const id = useState('id', () => 0);
-const animation = useState('animation', () => ({
-  enter: {
-    opacity: [1, 0],
-    translateX: [0, -300],
-    scale: [1, 0.2]
-  },
-  leave: {
-    opacity: 0,
-    height: 0
-  }
-}));
 
 function show(group: string, type = '') {
   const text = `
@@ -50,7 +39,6 @@ function clean(group: string) {
       group="custom-template"
       :duration="5000"
       :width="500"
-      animation-name="v-fade-left"
       position="top left"
     >
       <template #body="{ item }">
@@ -247,18 +235,6 @@ function clean(group: string) {
 
   p {
     margin-bottom: 1rem;
-  }
-
-  .v-fade-left-enter-active,
-  .v-fade-left-leave-active,
-  .v-fade-left-move {
-    transition: all 0.5s;
-  }
-
-  .v-fade-left-enter,
-  .v-fade-left-leave-to {
-    opacity: 0;
-    transform: translateX(-500px) scale(0.2);
   }
 }
 </style>
