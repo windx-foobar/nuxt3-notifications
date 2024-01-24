@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   extends: '@nuxt-themes/docus',
   devtools: { enabled: false },
   buildDir: '.nuxt3',
+  modules: ['../src/module.ts'],
   app: {
     baseURL: `/${name}`
   },
