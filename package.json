@@ -42,19 +42,19 @@
     "@nuxt/kit": "^3.0.0"
   },
   "dependencies": {
-    "@kyvg/vue3-notification": "^2.8.0",
+    "@kyvg/vue3-notification": "^3.1.4",
     "scule": "^1.0.0"
   },
   "devDependencies": {
     "@nuxt-themes/docus": "latest",
-    "@nuxt/module-builder": "^0.2.1",
+    "@nuxt/module-builder": "^0.5.5",
     "@nuxt/schema": "^3.0.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "changelogen": "^0.5.1",
     "cz-customizable": "^7.0.0",
-    "eslint": "8.22.0",
+    "eslint": "^8.56.0",
     "nuxt": "^3.0.0",
-    "prettier": "^2.8.3",
+    "prettier": "^3.2.5",
     "push-dir": "^0.4.1",
     "sass": "^1.57.1"
   },
