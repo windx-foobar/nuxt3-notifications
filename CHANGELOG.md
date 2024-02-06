@@ -1,6 +1,30 @@
 # Changelog
 
 
+## v1.2.0
+
+[compare changes](https://github.com/windx-foobar/nuxt3-notifications/compare/v1.1.9...v1.2.0)
+
+### 🚀 Enhancements
+
+- Created docs ([8e0a99b](https://github.com/windx-foobar/nuxt3-notifications/commit/8e0a99b))
+- Bump @kyvg/vue3-notification ([b8305c0](https://github.com/windx-foobar/nuxt3-notifications/commit/b8305c0))
+
+### 🩹 Fixes
+
+- Repair types ([6cf1ab6](https://github.com/windx-foobar/nuxt3-notifications/commit/6cf1ab6))
+- Repair demo and docs ([3a2e82e](https://github.com/windx-foobar/nuxt3-notifications/commit/3a2e82e))
+
+### 🏡 Chore
+
+- Remove custom buildDir ([634816a](https://github.com/windx-foobar/nuxt3-notifications/commit/634816a))
+- Added homepage link to docs site ([9257827](https://github.com/windx-foobar/nuxt3-notifications/commit/9257827))
+
+### ❤️ Contributors
+
+- Windx-foobar <bezalkogoln1ycoder@gmail.com>
+- Leonid G <agantelin@gmail.com>
+
 ## v1.1.9
 
 [compare changes](https://github.com/windx-foobar/nuxt3-notifications/compare/v1.1.8...v1.1.9)
