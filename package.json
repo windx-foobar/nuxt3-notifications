@@ -12,6 +12,7 @@
     "type": "git",
     "url": "https://github.com/windx-foobar/nuxt3-notifications"
   },
+  "homepage": "https://windx-foobar.github.io/nuxt3-notifications",
   "exports": {
     ".": {
       "import": "./dist/module.mjs",
