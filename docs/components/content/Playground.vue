@@ -29,17 +29,32 @@ function clean(group: string) {
 <template>
   <div id="demo">
     <!-- CSS animation example -->
-    <NuxtNotifications group="foo-css" position="bottom left" :speed="500" />
+    <NuxtNotifications
+      group="foo-css"
+      position="bottom left"
+      dangerously-set-inner-html
+      :speed="500"
+    />
 
     <!-- Custom style example -->
-    <NuxtNotifications group="custom-style" position="top center" :max="3" :width="400" />
+    <NuxtNotifications
+      group="custom-style"
+      position="top center"
+      classes="n-light"
+      :max="3"
+      :width="400"
+      :duration="-1"
+      dangerously-set-inner-html
+    />
 
     <!-- Custom template example -->
     <NuxtNotifications
       group="custom-template"
       :duration="5000"
       :width="500"
+      animation-name="v-fade-left"
       position="top left"
+      dangerously-set-inner-html
     >
       <template #body="{ item }">
         <div class="custom-template">
@@ -50,11 +65,19 @@ function clean(group: string) {
             <div class="custom-template-title">
               {{ item.title }}
 
-              <p>Random number: {{ item.data.randomNumber }}</p>
+              <p>
+                Random number: {{ item.data.randomNumber }}
+              </p>
             </div>
-            <div class="custom-template-text" v-html="item.text" />
+            <div
+              class="custom-template-text"
+              v-html="item.text"
+            />
           </div>
-          <div class="custom-template-close" @click="close">
+          <div
+            class="custom-template-close"
+            @click="close"
+          >
             <i class="icon ion-android-close" />
           </div>
         </div>
@@ -62,7 +85,12 @@ function clean(group: string) {
     </NuxtNotifications>
 
     <!-- Full width example -->
-    <NuxtNotifications group="full-width" width="100%" />
+    <NuxtNotifications
+      group="full-width"
+      width="100%"
+      position="bottom left"
+      dangerously-set-inner-html
+    />
 
     <div class="content">
       <p>CSS animation:</p>
@@ -87,7 +115,7 @@ function clean(group: string) {
       <div>
         <p></p>
         <p>Custom style:</p>
-        <button @click="show('custom-style')">top center (max=3)</button>
+        <button @click="show('custom-style')">top center (max=3, duration=infinity)</button>
         <p></p>
         <p>Custom template:</p>
         <button @click="show('custom-template')">show top left</button>
@@ -155,7 +183,7 @@ function clean(group: string) {
   /*
     EXAMPLES
   */
-  .notification.n-light {
+  :deep(.vue-notification-template.n-light) {
     margin: 10px;
     margin-bottom: 0;
     border-radius: 3px;
@@ -235,6 +263,18 @@ function clean(group: string) {
 
   p {
     margin-bottom: 1rem;
+  }
+
+  :deep(.v-fade-left-enter-active),
+  :deep(.v-fade-left-leave-active),
+  :deep(.v-fade-left-move) {
+    transition: all .5s;
+  }
+
+  :deep(.v-fade-left-enter),
+  :deep(.v-fade-left-leave-to) {
+    opacity: 0;
+    transform: translateX(-500px) scale(0.2);
   }
 }
 </style>
