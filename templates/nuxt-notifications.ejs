@@ -1,32 +1,9 @@
-type SlotType<T> = (slotProps: T) => import("vue").VNode | undefined;
-
-interface NotificationsProps {
-  group: string | undefined
-  width: string | number | undefined
-  reverse: boolean | undefined
-  position: string | string[] | undefined
-  classes: string | undefined
-  animationName: string | undefined
-  speed: number | undefined
-  cooldown: number | undefined
-  duration: number | undefined
-  delay: number | undefined
-  max: number | undefined
-  ignoreDuplicates: boolean | undefined
-  closeOnClick: boolean | undefined
-  pauseOnHover: boolean | undefined
-  $slots: {
-    body: SlotType<{ item: Record<string, any> }>
-  }
-}
-
 declare module "@vue/runtime-core" {
   export interface GlobalComponents {
-    "<%= options.componentName %>": import("vue").DefineComponent<NotificationsProps>
+    "<%= options.componentName %>": typeof import('@kyvg/vue3-notification')['Notifications']
   }
 }
 
-// FIXES type to global import useNotification
 declare global {
   const useNotification: typeof import('@kyvg/vue3-notification')['useNotification']
 }
@@ -34,14 +11,14 @@ declare global {
 import { UnwrapRef } from 'vue';
 declare module 'vue' {
   interface ComponentCustomProperties {
-    readonly useNotification: UnwrapRef<typeof import('@kyvg/vue3-notification')['useNotification']>
+    readonly useNotification: typeof import('@kyvg/vue3-notification')['useNotification']
   }
 }
 
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
-    readonly useNotification: UnwrapRef<typeof import('@kyvg/vue3-notification')['useNotification']>
+    readonly useNotification: typeof import('@kyvg/vue3-notification')['useNotification']
   }
 }
 
-export const <%= options.componentName %>: import("vue").DefineComponent<NotificationsProps>
+export const <%= options.componentName %>: typeof import('@kyvg/vue3-notification')['Notifications']
