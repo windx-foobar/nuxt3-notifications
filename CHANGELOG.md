@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v1.2.1
+
+[compare changes](https://github.com/windx-foobar/nuxt3-notifications/compare/v1.2.0...v1.2.1)
+
+### 🩹 Fixes
+
+- Resolve module runtimeConfig in new versions of nuxt ([e4edc0a](https://github.com/windx-foobar/nuxt3-notifications/commit/e4edc0a))
+
+### 🏡 Chore
+
+- Added `defu` in dependencies list ([2dfb472](https://github.com/windx-foobar/nuxt3-notifications/commit/2dfb472))
+- Regenerate lockfile ([67d4858](https://github.com/windx-foobar/nuxt3-notifications/commit/67d4858))
+
+### ❤️ Contributors
+
+- Windx-foobar <bezalkogoln1ycoder@gmail.com>
+- Bram Esposito <bram@bramesposito.com>
+
 ## v1.2.0
 
 [compare changes](https://github.com/windx-foobar/nuxt3-notifications/compare/v1.1.9...v1.2.0)
