@@ -31,13 +31,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url));
 
-    nuxt.options.runtimeConfig = {
-      ...(nuxt.options.runtimeConfig || {}),
-      public: {
-        ...(nuxt.options.runtimeConfig.public || {}),
-        nuxtNotifications: { componentName }
-      }
-    };
+    updateRuntimeConfig({ public: { nuxtNotifications: { componentName } } });
 
     // GLOBAL useNotification hook
     addImports({
