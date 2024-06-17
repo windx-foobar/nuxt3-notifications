@@ -2,7 +2,7 @@ import { fileURLToPath } from 'node:url';
 import { type Nuxt } from '@nuxt/schema';
 import { pascalCase } from 'scule';
 import { defu } from 'defu';
-import { defineNuxtModule, addPlugin, createResolver, useLogger, addImports, addTemplate } from '@nuxt/kit';
+import { defineNuxtModule, addPlugin, createResolver, useLogger, addImports, addTemplate, addImportsDir } from '@nuxt/kit';
 
 const PACKAGE_NAME = 'nuxt-notifications';
 
@@ -43,10 +43,7 @@ export default defineNuxtModule<ModuleOptions>({
     updateRuntimeConfig(nuxt, { public: { nuxtNotifications: { componentName } } });
 
     // GLOBAL useNotification hook
-    addImports({
-      name: 'useNotification',
-      from: '@kyvg/vue3-notification'
-    });
+    addImportsDir(resolve('./runtime/composables'));
 
     // TYPING DYNAMIC COMPONENT
     addTemplate({
@@ -61,7 +58,6 @@ export default defineNuxtModule<ModuleOptions>({
     });
 
     addPlugin({
-      mode: nuxt.options.ssr ? 'all' : 'client',
       src: resolve(runtimeDir, 'plugin')
     });
 
