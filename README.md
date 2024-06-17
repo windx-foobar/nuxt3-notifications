@@ -14,9 +14,9 @@ This is module [@kyvg/vue3-notification](https://github.com/kyvg/vue3-notificati
 1. Install `nuxt3-notifications` as project dependency:
 
 ```bash
-npm i nuxt3-notifications # npm
-yarn add nuxt3-notifications # yarn
-pnpm i nuxt3-notifications # pnpm
+npm install --save-dev nuxt3-notifications # npm
+yarn add -D nuxt3-notifications # yarn classic
+pnpm i -D nuxt3-notifications # pnpm
 ```
 
 2. Add it to the `modules` section of your `nuxt.config`:
