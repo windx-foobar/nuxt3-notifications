@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v1.2.2
+
+[compare changes](https://github.com/windx-foobar/nuxt3-notifications/compare/v1.2.1...v1.2.2)
+
+### 🩹 Fixes
+
+- Replace re-export `@kyvg/vue3-notification#useNotification` to self writed composable ([6edd7fb](https://github.com/windx-foobar/nuxt3-notifications/commit/6edd7fb))
+
+### 🏡 Chore
+
+- Switch package manager to pnpm ([f0df088](https://github.com/windx-foobar/nuxt3-notifications/commit/f0df088))
+- Bump `@kyvg/vue3-notification` version ([99a3cb1](https://github.com/windx-foobar/nuxt3-notifications/commit/99a3cb1))
+- Switch node version to lts ([61c5cd2](https://github.com/windx-foobar/nuxt3-notifications/commit/61c5cd2))
+
+### ❤️ Contributors
+
+- Windx-foobar <bezalkogoln1ycoder@gmail.com>
+
 ## v1.2.1
 
 [compare changes](https://github.com/windx-foobar/nuxt3-notifications/compare/v1.2.0...v1.2.1)
