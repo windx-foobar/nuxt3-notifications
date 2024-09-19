@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v1.2.3
+
+[compare changes](https://github.com/windx-foobar/nuxt3-notifications/compare/v1.2.2...v1.2.3)
+
+### 🩹 Fixes
+
+- Safe set `nuxt.options.nitro.runtimeConfig` in `updateRuntimeConfig` ([bd945f9](https://github.com/windx-foobar/nuxt3-notifications/commit/bd945f9))
+
+### 🏡 Chore
+
+- Switch yarn to pnpm in README.md ([76002d5](https://github.com/windx-foobar/nuxt3-notifications/commit/76002d5))
+- Get started instruction from docs ([bdc4f8c](https://github.com/windx-foobar/nuxt3-notifications/commit/bdc4f8c))
+
+### ❤️ Contributors
+
+- Chris Wijaya ([@chriswijaya](http://github.com/chriswijaya))
+- Windx-foobar <bezalkogoln1ycoder@gmail.com>
+
 ## v1.2.2
 
 [compare changes](https://github.com/windx-foobar/nuxt3-notifications/compare/v1.2.1...v1.2.2)
