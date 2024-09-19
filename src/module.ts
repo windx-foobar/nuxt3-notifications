@@ -13,8 +13,8 @@ export interface ModuleOptions {
 // Look at the latest feature nuxt@^3.11
 // https://github.com/nuxt/nuxt/commit/cebc89186e30a5e5faea2e1823cd07d5bfcf1488#diff-da67aaec25500121cfcdb6de885cf79fa10e2211c93225dfa6951323d1e93298R27
 const updateRuntimeConfig = (nuxt: Nuxt, runtimeConfig: Record<string, unknown> = {}) => {
-  if(!nuxt.options.nitro?.runtimeConfig)
-    nuxt.options.nitro.runtimeConfig = {}
+  // Fix: https://github.com/windx-foobar/nuxt3-notifications/issues/7
+  nuxt.options.nitro.runtimeConfig = nuxt.options.nitro.runtimeConfig ?? {};
 
   Object.assign(nuxt.options.runtimeConfig, defu(runtimeConfig, nuxt.options.runtimeConfig));
   Object.assign(nuxt.options.nitro.runtimeConfig as Record<string, unknown>, defu(runtimeConfig, nuxt.options.nitro.runtimeConfig));
