@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v1.3.0
+
+[compare changes](https://github.com/windx-foobar/nuxt3-notifications/compare/v1.2.3...v1.3.0)
+
+### 🚀 Enhancements
+
+- Register `Notification` component via `@nuxt/kit#addComponent` ([3038b1c](https://github.com/windx-foobar/nuxt3-notifications/commit/3038b1c))
+
+### 🏡 Chore
+
+- Upd playground ([bfc4745](https://github.com/windx-foobar/nuxt3-notifications/commit/bfc4745))
+- Upd docs ([19a6fff](https://github.com/windx-foobar/nuxt3-notifications/commit/19a6fff))
+- Bump `@kyvg/vue3-notification` ([b1b6c05](https://github.com/windx-foobar/nuxt3-notifications/commit/b1b6c05))
+
+### ❤️ Contributors
+
+- Windx-foobar <bezalkogoln1ycoder@gmail.com>
+
 ## v1.2.3
 
 [compare changes](https://github.com/windx-foobar/nuxt3-notifications/compare/v1.2.2...v1.2.3)
