@@ -43,9 +43,8 @@
     "@nuxt/kit": "^3.0.0"
   },
   "dependencies": {
-    "@kyvg/vue3-notification": "^3.2.1",
-    "scule": "^1.0.0",
-    "defu": "^6.1.4"
+    "@kyvg/vue3-notification": "^3.4.1",
+    "scule": "^1.0.0"
   },
   "devDependencies": {
     "@nuxt-themes/docus": "latest",
