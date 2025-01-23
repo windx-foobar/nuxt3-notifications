@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { useState } from '#app';
 import { useNotification } from '#imports';
+import { NuxtNotifications } from '#components';
 
 const { notify } = useNotification();
 
@@ -64,15 +65,21 @@ function clean(group: string) {
     <NuxtNotifications
       group="custom-template"
       :duration="5000"
-      :width="500"
+      :width="650"
       animation-name="v-fade-left"
       position="top left"
       dangerously-set-inner-html
     >
-      <template #body="{ item }">
+      <template #body="{ item, close }">
         <div class="custom-template">
           <div class="custom-template-icon">
-            <i class="icon ion-android-checkmark-circle" />
+            <svg width="32" height="32" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Icon-Set" transform="translate(-100.000000, -1139.000000)" fill="currentColor">
+                  <path d="M122.027,1148.07 C121.548,1147.79 120.937,1147.96 120.661,1148.43 L114.266,1159.51 L110.688,1156.21 C110.31,1155.81 109.677,1155.79 109.274,1156.17 C108.871,1156.54 108.85,1157.18 109.228,1157.58 L113.8,1161.8 C114.177,1162.2 114.81,1162.22 115.213,1161.84 C115.335,1161.73 122.393,1149.43 122.393,1149.43 C122.669,1148.96 122.505,1148.34 122.027,1148.07 L122.027,1148.07 Z M116,1169 C108.268,1169 102,1162.73 102,1155 C102,1147.27 108.268,1141 116,1141 C123.732,1141 130,1147.27 130,1155 C130,1162.73 123.732,1169 116,1169 L116,1169 Z M116,1139 C107.164,1139 100,1146.16 100,1155 C100,1163.84 107.164,1171 116,1171 C124.836,1171 132,1163.84 132,1155 C132,1146.16 124.836,1139 116,1139 L116,1139 Z" />
+                </g>
+              </g>
+            </svg>
           </div>
           <div class="custom-template-content">
             <div class="custom-template-title">
@@ -91,7 +98,10 @@ function clean(group: string) {
             class="custom-template-close"
             @click="close"
           >
-            <i class="icon ion-android-close" />
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 17L16.8995 7.10051" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M7 7.00001L16.8995 16.8995" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </div>
         </div>
       </template>
@@ -261,6 +271,9 @@ function clean(group: string) {
     color: #15C371;
     font-size: 32px;
     padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .custom-template-close {
@@ -269,6 +282,10 @@ function clean(group: string) {
     font-size: 16px;
     opacity: 0.2;
     cursor: pointer;
+    color: #495061;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
       opacity: 0.8;
