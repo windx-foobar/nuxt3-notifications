@@ -1,15 +1,7 @@
-import Notifications from '@kyvg/vue3-notification';
+import { notify } from '@kyvg/vue3-notification';
 
-import { defineNuxtPlugin, useRuntimeConfig } from '#app';
+import { defineNuxtPlugin } from '#app';
 
 export default defineNuxtPlugin((nuxtApp) => {
-  const {
-    nuxtNotifications: { componentName = 'NuxtNotifications' }
-  } = useRuntimeConfig().public;
-
-  nuxtApp.vueApp.use(Notifications, {
-    name: 'notify',
-    componentName,
-    velocity: undefined
-  });
+  nuxtApp.vueApp.config.globalProperties.$notify = notify;
 });
