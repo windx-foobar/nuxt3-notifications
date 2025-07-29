@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.3.1
+
+[compare changes](https://github.com/windx-foobar/nuxt3-notifications/compare/v1.3.0...v1.3.1)
+
+### 🏡 Chore
+
+- Indicate compatibility with new v4 major ([0c1acec](https://github.com/windx-foobar/nuxt3-notifications/commit/0c1acec))
+
+### ❤️ Contributors
+
+- TrenLok <arediveev@gmail.com>
+
 ## v1.3.0
 
 [compare changes](https://github.com/windx-foobar/nuxt3-notifications/compare/v1.2.3...v1.3.0)
