@@ -1,11 +1,12 @@
 import { fileURLToPath } from 'node:url';
 import { pascalCase } from 'scule';
-import { defineNuxtModule, addPlugin, createResolver, useLogger, addImportsDir, addComponent } from '@nuxt/kit';
+import { defineNuxtModule, addPlugin, createResolver, useLogger, addComponent, addImports } from '@nuxt/kit';
 
 const PACKAGE_NAME = 'nuxt-notifications';
 
 export interface ModuleOptions {
   componentName: string | undefined;
+  composableName: string | undefined;
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -17,7 +18,8 @@ export default defineNuxtModule<ModuleOptions>({
     }
   },
   defaults: {
-    componentName: 'NuxtNotifications'
+    componentName: 'NuxtNotifications',
+    composableName: 'useNotification'
   },
   async setup(options) {
     const logger = useLogger(PACKAGE_NAME);
@@ -31,9 +33,6 @@ export default defineNuxtModule<ModuleOptions>({
 
     const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url));
 
-    // GLOBAL useNotification hook
-    addImportsDir(resolve('./runtime/composables'));
-
     addPlugin({
       src: resolve(runtimeDir, 'plugin')
     });
@@ -44,6 +43,12 @@ export default defineNuxtModule<ModuleOptions>({
       export: 'Notifications',
       global: true
     });
+
+    addImports({
+      name: 'useNotification',
+      as: options.composableName,
+      from: resolve('./runtime/composables/useNotification')
+    })
 
     logger.success('Setup end');
   }

@@ -61,7 +61,8 @@ export default defineNuxtConfig({
 export default defineNuxtConfig({
   modules: ['nuxt3-notifications'],
   nuxtNotifications: {
-    componentName: 'Foo' // 'foo-bar' or 'FooBar' for components of two or more words
+    componentName: 'Foo', // 'foo-bar' or 'FooBar' for components of two or more words
+    composableName: 'useFoo',
   },
 });
 ```

@@ -10,6 +10,10 @@ export default defineNuxtConfig({
     /**
      * @description Наименование компонента уведомлений
      */
-    // componentName: 'NuxtNotifications'
+    // componentName: 'NuxtNotifications',
+    /**
+     * @description Наименование composable уведомлений
+     */
+    // composableName: 'useNotification',
   }
 });
