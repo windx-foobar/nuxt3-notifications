@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v1.4.0
+
+[compare changes](https://github.com/windx-foobar/nuxt3-notifications/compare/v1.3.1...v1.4.0)
+
+### 🚀 Enhancements
+
+- Add name setting for composable ([a55679b](https://github.com/windx-foobar/nuxt3-notifications/commit/a55679b))
+
+### 🏡 Chore
+
+- Lock `typescript` version for fix `eslint` warning ([bccab3b](https://github.com/windx-foobar/nuxt3-notifications/commit/bccab3b))
+
+### ❤️ Contributors
+
+- Windx-foobar <bezalkogoln1ycoder@gmail.com>
+- TrenLok <arediveev@gmail.com>
+
 ## v1.3.1
 
 [compare changes](https://github.com/windx-foobar/nuxt3-notifications/compare/v1.3.0...v1.3.1)
