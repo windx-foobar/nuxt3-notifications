@@ -1,0 +1,1 @@
+import{l as r,c as t,e as n,$ as o}from"./PPCR3Tio.js";const s={};function c(e,a){return t(),n("li",null,[o(e.$slots,"default",{},void 0,!0)])}const l=r(s,[["render",c],["__scopeId","data-v-4db5db30"]]);export{l as default};
